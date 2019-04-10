@@ -23,10 +23,17 @@ public class IndexerTest {
     @Test
     public void index() throws IOException {
         Indexer indexer = new Indexer("C://develop\\lucene\\testIndex");
-        HashMap<String, String> map = new HashMap<>();
-        map.put("name","xiaoxiao");
-        map.put("conten","chenggongle");
-        map.put("pass","12345");
-        indexer.index(Arrays.asList(map));
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 1000000; i++) {
+            HashMap<String, String> map = new HashMap<>();
+            map.put("name","xiaoxiao");
+            map.put("conten","chenggongle");
+            map.put("pass","12345");
+            indexer.index(Arrays.asList(map));
+            if (i%100 == 0){
+            System.err.println("i="+i+", time="+(System.currentTimeMillis()-start)/1000);
+        }}
+        System.err.println("time="+(System.currentTimeMillis()-start)/1000);
+        indexer.close();
     }
 }
