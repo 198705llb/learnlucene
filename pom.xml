@@ -31,11 +31,11 @@
         <version>${lucene.version}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-  <!--  <dependency>
+    <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
-        <version>3.8.0</version>
-    </dependency>-->
+        <version>3.8</version>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
